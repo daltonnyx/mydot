@@ -17,18 +17,18 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-dark"
 theme.wallpaper                                 = theme.dir .. "/wall.png"
-theme.font                                      = "Terminus 9"
-theme.fg_normal                                 = "#DDDDFF"
-theme.fg_focus                                  = "#EA6F81"
+theme.font                                      = "Terminus 10"
+theme.fg_normal                                 = "#ECEFF4"
+theme.fg_focus                                  = "#D08770"
 theme.fg_urgent                                 = "#CC9393"
-theme.bg_normal                                 = "#1A1A1A"
-theme.bg_focus                                  = "#313131"
-theme.bg_urgent                                 = "#1A1A1A"
-theme.border_width                              = dpi(3)
+theme.bg_normal                                 = "#2E3440"
+theme.bg_focus                                  = "#4C566A"
+theme.bg_urgent                                 = "#2E3440"
+theme.border_width                              = dpi(2)
 theme.border_normal                             = "#81A1C1"
 theme.border_focus                              = "#88C0D0"
 theme.border_marked                             = "#CC9393"
-theme.tasklist_bg_focus                         = "#1A1A1A"
+theme.tasklist_bg_focus                         = "#2E3440"
 theme.titlebar_bg_focus                         = theme.bg_focus
 theme.titlebar_bg_normal                        = theme.bg_normal
 theme.titlebar_fg_focus                         = theme.fg_focus
@@ -67,7 +67,7 @@ theme.widget_vol_mute                           = theme.dir .. "/icons/vol_mute.
 theme.widget_mail                               = theme.dir .. "/icons/mail.png"
 theme.widget_mail_on                            = theme.dir .. "/icons/mail_on.png"
 theme.tasklist_plain_task_name                  = true
-theme.tasklist_disable_icon                     = true
+theme.tasklist_disable_icon                     = false
 theme.useless_gap                               = dpi(2)
 theme.titlebar_close_button_focus               = theme.dir .. "/icons/titlebar/close_focus.png"
 theme.titlebar_close_button_normal              = theme.dir .. "/icons/titlebar/close_normal.png"
@@ -165,7 +165,7 @@ theme.mpd = lain.widget.mpd({
             mpdicon:set_image(theme.widget_music)
         end
 
-        widget:set_markup(markup.font(theme.font, markup("#EA6F81", artist) .. title))
+        widget:set_markup(markup.font(theme.font, markup("#D08770", artist) .. title))
     end
 })
 
@@ -227,7 +227,7 @@ local bat = lain.widget.bat({
 })
 
 -- ALSA volume
---[[ 
+
 local volicon = wibox.widget.imagebox(theme.widget_vol)
 theme.volume = lain.widget.alsa({
     settings = function()
@@ -255,7 +255,7 @@ theme.volume.widget:buttons(awful.util.table.join(
                                      theme.volume.update()
                                end)
 ))
---]]
+
 -- Net
 local neticon = wibox.widget.imagebox(theme.widget_net)
 local net = lain.widget.net({
@@ -301,10 +301,39 @@ function theme.at_screen_connect(s)
     s.mytaglist = awful.widget.taglist(s, awful.widget.taglist.filter.all, awful.util.taglist_buttons)
 
     -- Create a tasklist widget
-    s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
+    local tasklist_template = {
+        {
+            {
+                {
+                    {
+                        id     = 'icon_role',
+                        widget = wibox.widget.imagebox,
+                    },
+                    margins = 4,
+                    widget  = wibox.container.margin,
+                },
+                {
+                    id     = 'text_role',
+                    widget = wibox.widget.textbox,
+                },
+                layout = wibox.layout.fixed.horizontal,
+            },
+            left  = 10,
+            right = 10,
+            widget = wibox.container.margin
+        },
+        id     = 'background_role',
+        widget = wibox.container.background,
+    }
+    s.mytasklist = awful.widget.tasklist {
+        screen = s, 
+        filter = awful.widget.tasklist.filter.currenttags, 
+        widget_template = tasklist_template, 
+        buttons = awful.util.tasklist_buttons
+    }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(20), bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(22), bg = theme.bg_normal, fg = theme.fg_normal })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -319,24 +348,24 @@ function theme.at_screen_connect(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            wibox.widget.systray(),
+            wibox.layout.margin(wibox.widget.systray(), 3, 3, 3, 3),--wibox.widget.systray(),
             keyboardlayout,
             spr,
-            arrl_ld,
-            wibox.container.background(mpdicon, theme.bg_focus),
-            wibox.container.background(theme.mpd.widget, theme.bg_focus),
-            arrl_dl,
-            volicon,
-            --theme.volume.widget,
-            arrl_ld,
-            wibox.container.background(mailicon, theme.bg_focus),
-            --wibox.container.background(theme.mail.widget, theme.bg_focus),
-            -- arrl_dl,
-            --memicon,
-            --mem.widget,
             --arrl_ld,
-            --wibox.container.background(cpuicon, theme.bg_focus),
-            --wibox.container.background(cpu.widget, theme.bg_focus),
+            --wibox.container.background(mpdicon, theme.bg_focus),
+            --wibox.container.background(theme.mpd.widget, theme.bg_focus),
+            arrl_ld,
+            wibox.container.background(volicon, theme.bg_focus),
+            wibox.container.background(theme.volume.widget, theme.bg_focus),
+            --arrl_ld,
+            --wibox.container.background(mailicon, theme.bg_focus),
+            --wibox.container.background(theme.mail.widget, theme.bg_focus),
+            arrl_dl,
+            memicon,
+            mem.widget,
+            arrl_ld,
+            wibox.container.background(cpuicon, theme.bg_focus),
+            wibox.container.background(cpu.widget, theme.bg_focus),
             --arrl_dl,
             --tempicon,
             --temp.widget,
