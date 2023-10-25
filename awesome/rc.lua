@@ -83,6 +83,16 @@ awful.spawn.with_shell(
 --]]
 
 -- }}}
+--
+
+-- {{{ Custom notification
+naughty.config.defaults.icon_size = 32
+naughty.config.defaults.hover_timeout = 120
+naughty.config.defaults.margin = 16
+naughty.config.defaults.shape = function(cr,w,h)
+    gears.shape.infobubble(cr,w,h)
+end
+-- }}}
 
 -- {{{ Variable definitions
 
@@ -178,8 +188,10 @@ beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv
 
 
 beautiful.icon_theme = "Colloid-green"
-beautiful.notification_max_height = 70
+--beautiful.notification_max_height = 70
 beautiful.notification_opacity = 80
+beautiful.notification_max_width = 800
+
 -- }}}
 
 -- {{{ Menu

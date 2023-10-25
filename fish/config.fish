@@ -13,10 +13,13 @@ if status is-interactive
     end
     fzf_configure_bindings --directory=\cf --git_log=\cg
     set fzf_fd_opts --hidden --exclude=.git --exclude=.vscode --exclude=.npm --exclude=.nvm --exclude=.nx --exclude=.mozilla
-    if status is-interactive
-    and not set -q TMUX 
-    and test "$TERM" = "xterm-kitty"
-        set TERM "xterm-256color"
-        exec tmux new -As 0
+    if fgconsole &>/dev/null;
+        /home/quy.truong/.xhyprland
     end
+    #if status is-interactive
+    #and not set -q TMUX 
+    #and test "$TERM" = "xterm-kitty"
+    #    set TERM "xterm-256color"
+    #    exec tmux new -As 0
+    #end
 end
