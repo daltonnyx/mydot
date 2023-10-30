@@ -46,3 +46,4 @@ require("lazy").setup({
 })
 
 require("Comment").setup()
+vim.opt.swapfile = false
