@@ -11,10 +11,17 @@
     // Modules configuration
     
     "hyprland/workspaces": {
-        "format": "{name}",
+        "format": "{icon}",
         "persistent-workspaces": {
-            "*": 3
-        }
+            "web": ["HDMI-A-1"],
+            "client": ["HDMI-A-1"],
+            "code": ["HDMI-A-1"]
+        },
+        "format-icons": {
+            "web": "\ue745",
+            "client": "\uf21b",
+            "code": "\uf126"
+          }
     },
 
     "keyboard-state": {
