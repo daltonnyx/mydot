@@ -47,3 +47,4 @@ require("lazy").setup({
 
 require("Comment").setup()
 vim.opt.swapfile = false
+require("nvim-dap-projects").search_project_config()

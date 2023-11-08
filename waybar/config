@@ -6,21 +6,23 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["clock", "tray", "keyboard-state"],
+    "modules-center": ["clock", "tray"], //, "keyboard-state"],
     "modules-right": [ "pulseaudio", "network", "cpu", "memory", "backlight", "battery"],
     // Modules configuration
     
     "hyprland/workspaces": {
         "format": "{icon}",
         "persistent-workspaces": {
-            "web": ["HDMI-A-1"],
-            "client": ["HDMI-A-1"],
-            "code": ["HDMI-A-1"]
+            "1": ["HDMI-A-1"],
+            "2": ["HDMI-A-1"],
+            "3": ["HDMI-A-1"],
+            "4": ["HDMI-A-1"]
         },
         "format-icons": {
-            "web": "\ue745",
-            "client": "\uf21b",
-            "code": "\uf126"
+            "1": "\ue745",
+            "2": "\uf21b",
+            "3": "\uf126",
+            "4": "\uf11b"
           }
     },
 
@@ -79,9 +81,10 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
+        // "timezone": "Asia/Bangkok",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%m-%d/%H:%M}",
+        "format-alt": "{:%Y-%m-%d}",
     },
     "cpu": {
         "format": "{usage}% ",
