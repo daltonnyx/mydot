@@ -171,6 +171,19 @@ window#waybar.hidden {
 	/*background: #1A1826;*/
 }
 
+#custom-sydtime {
+	margin-top: 6px;
+	margin-left: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 8px;
+	transition: none;
+	color: @overlay0;
+	background: @lavender;
+	/*background: #1A1826;*/
+}
+
 #memory {
 	margin-top: 6px;
 	margin-left: 6px;

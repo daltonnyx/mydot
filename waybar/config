@@ -6,7 +6,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["clock", "tray"], //, "keyboard-state"],
+    "modules-center": ["clock", "custom/sydtime", "tray"], //, "keyboard-state"],
     "modules-right": [ "pulseaudio", "network", "cpu", "memory", "backlight", "battery"],
     // Modules configuration
     
@@ -162,6 +162,11 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/sydtime": {
+      "exec": "env TZ='Australia/Sydney' date +'%H:%M SYD'",
+      "interval": 20,
+      "tooltip": false
     }
 }
 
