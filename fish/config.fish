@@ -3,6 +3,7 @@ if status is-interactive
     fish_add_path /home/quy.truong/.dotnet
     # Commands to run in interactive sessions can go here
     alias vim="nvim"
+    alias nvimdiff="nvim -d"
     set _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
 
     function vim_cs -d "Print vim cheat sheet"
