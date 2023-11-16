@@ -5,8 +5,8 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["clock", "custom/sydtime", "tray"], //, "keyboard-state"],
+    "modules-left": ["clock", "custom/sydtime", "tray"], //, "hyprland/window", "keyboard-state"],
+    "modules-center": ["hyprland/workspaces"],
     "modules-right": [ "pulseaudio", "network", "cpu", "memory", "backlight", "battery"],
     // Modules configuration
     
@@ -126,11 +126,12 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} \udb80\ude00",
+        "format-ethernet": "\ueaa1{bandwidthUpBytes} \uea9a{bandwidthDownBytes} \udb80\ude00",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "interval": 10
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float

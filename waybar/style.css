@@ -25,7 +25,7 @@ window#waybar.hidden {
 	background: transparent;
 }
 
-#workspaces button {
+#workspaces {
     margin-top: 6px;
 	margin-left: 6px;
 	padding-left: 10px;
@@ -34,14 +34,16 @@ window#waybar.hidden {
 	border-radius: 8px;
 	transition: none;
     background: @rosewater;
-    color: @overlay0;
 }
 
-#workspaces button.empty {
+#workspaces button {
+  color: @overlay1;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #workspaces button.active {
-    background: @red;
+    color: @sapphire;
 }
 
 #tags {
