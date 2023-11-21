@@ -14,7 +14,7 @@ if status is-interactive
     end
     fzf_configure_bindings --directory=\cf --git_log=\cg
     set fzf_fd_opts --hidden --exclude=.git --exclude=.vscode --exclude=.npm --exclude=.nvm --exclude=.nx --exclude=.mozilla
-    if fgconsole &>/dev/null
+    if test "$(fgconsole)" = 1
         /home/quy.truong/.xhyprland
     end
     #if status is-interactive
