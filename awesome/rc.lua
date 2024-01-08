@@ -122,7 +122,7 @@ local editor = os.getenv("EDITOR") or "nvim"
 local browser = "firefox-developer-edition"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "web", "term", "code" }
+awful.util.tagnames = { "ST", "clients", "code", "fun" }
 awful.layout.layouts = {
 	awful.layout.suit.magnifier,
 	awful.layout.suit.tile,
@@ -598,19 +598,49 @@ globalkeys = mytable.join(
 	awful.key({ modkey, "Shift" }, "p", function()
 		os.execute(
 			string.format(
-				"rofi -combi-modi window,drun -show %s -theme %s -show-icons -icon-theme 'Papirus'",
+				"killall rofi || rofi -combi-modi window,drun -show %s -theme %s -show-icons -icon-theme 'Papirus'",
 				"combi",
-				"nord"
+				"catppuccin-macchiato"
 			)
 		)
 	end, { description = "show rofi", group = "launcher" }),
 
 	awful.key({ modkey, "Shift" }, "o", function()
-		os.execute(string.format("rofi -show %s -theme %s -show-icons -icon-theme 'Papirus'", "filebrowser", "nord"))
+		os.execute(
+			string.format(
+				"killall rofi || rofi -show %s -theme %s -show-icons -icon-theme 'Papirus'",
+				"filebrowser",
+				"catppuccin-macchiato"
+			)
+		)
 	end, { description = "show rofi", group = "launcher" }),
 	awful.key({ modkey, "Shift" }, "c", function()
-		os.execute(string.format("rofi -show %s -theme %s -show-icons -icon-theme 'Papirus'", "calc", "nord"))
+		os.execute(
+			string.format(
+				"killall rofi || rofi -show %s -theme %s -show-icons -icon-theme 'Papirus'",
+				"calc",
+				"catppuccin-macchiato"
+			)
+		)
 	end, { description = "calculator", group = "launcher" }),
+	awful.key({ modkey, "Shift" }, "t", function()
+		os.execute(string.format("/home/quy.truong/.config/rofi/notes/rofi_notes.sh"))
+	end, { description = "Notes", group = "launcher" }),
+	awful.key({ modkey, "Shift" }, "x", function()
+		os.execute(
+			string.format(
+				"killall rofi || rofi -modi lpass:/home/quy.truong/desktop-config/rofi-lpass/rofi-lpass -show lpass  -theme catppuccin-macchiato -show-icons -icon-theme 'Papirus'"
+			)
+		)
+	end, { description = "Lastpass vault", group = "launcher" }),
+	awful.key({ modkey }, "v", function()
+		os.execute(
+			string.format(
+				"killall rofi || clipcat-menu --rofi-extra-arguments=-theme,catppuccin-macchiato,-show-icons,-icon-theme,'Papirus'"
+			)
+		)
+	end, { description = "Lastpass vault", group = "launcher" }),
+
 	-- Prompt
 	awful.key({ modkey }, "r", function()
 		awful.screen.focused().mypromptbox:run()
