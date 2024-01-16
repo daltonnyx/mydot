@@ -565,17 +565,20 @@ globalkeys = mytable.join(
 	end, { description = "mpc on/off", group = "widgets" }),
 
 	-- Copy primary to clipboard (terminals to gtk)
-	awful.key({ modkey }, "c", function()
-		awful.spawn.with_shell("xsel | xsel -i -b")
-	end, { description = "copy terminal to gtk", group = "hotkeys" }),
-	-- Copy clipboard to primary (gtk to terminals)
-	awful.key({ modkey }, "v", function()
-		awful.spawn.with_shell("xsel -b | xsel")
-	end, { description = "copy gtk to terminal", group = "hotkeys" }),
+	-- awful.key({ modkey }, "c", function()
+	-- 	awful.spawn.with_shell("xsel | xsel -i -b")
+	-- end, { description = "copy terminal to gtk", group = "hotkeys" }),
+	-- -- Copy clipboard to primary (gtk to terminals)
+	-- awful.key({ modkey }, "v", function()
+	-- 	awful.spawn.with_shell("xsel -b | xsel")
+	-- end, { description = "copy gtk to terminal", group = "hotkeys" }),
 
 	awful.key({ modkey, "Control" }, "q", function()
-		awful.spawn.with_shell("lock_screen")
+		awful.spawn("lock_screen")
 	end, { description = "lock screen", group = "hotkeys" }),
+	awful.key({ modkey, "Control" }, "m", function()
+		awful.spawn("warpd --hint")
+	end, { description = "mouse control", group = "hotkeys" }),
 	-- User programs
 	--awful.key({ modkey }, "q", function () awful.spawn(browser) end,
 	--          {description = "run browser", group = "launcher"}),
@@ -639,7 +642,7 @@ globalkeys = mytable.join(
 				"killall rofi || clipcat-menu --rofi-extra-arguments=-theme,catppuccin-macchiato,-show-icons,-icon-theme,'Papirus'"
 			)
 		)
-	end, { description = "Lastpass vault", group = "launcher" }),
+	end, { description = "Clipboard", group = "launcher" }),
 
 	-- Prompt
 	awful.key({ modkey }, "r", function()
