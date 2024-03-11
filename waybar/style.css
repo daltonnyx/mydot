@@ -196,6 +196,19 @@ window#waybar.hidden {
 	/*background: #1A1826;*/
 }
 
+#custom-blue_bat {
+	margin-top: 6px;
+	margin-left: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 8px;
+	transition: none;
+	color: @overlay0;
+	background: @pink;
+	/*background: #1A1826;*/
+}
+
 #memory {
 	margin-top: 6px;
 	margin-left: 6px;

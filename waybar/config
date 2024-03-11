@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["clock", "custom/sydtime", "tray", "hyprland/submap"], //, "hyprland/window", "keyboard-state"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": [ "pulseaudio", "network", "cpu", "memory", "backlight", "battery"],
+    "modules-right": [ "custom/blue_bat", "pulseaudio", "network", "cpu", "memory", "backlight", "battery"],
     // Modules configuration
     "hyprland/submap": {
         "format": "{}",
@@ -172,6 +172,11 @@
     "custom/sydtime": {
       "exec": "env TZ='Australia/Sydney' date +'%H:%M SYD'",
       "interval": 20,
+      "tooltip": false
+    },
+    "custom/blue_bat": {
+      "exec": "$HOME/.config/waybar/script/bat.sh",
+      "interval": 600,
       "tooltip": false
     }
 }
