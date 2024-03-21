@@ -1,5 +1,5 @@
 configuration {
-	modes: "window,drun,run,ssh,filebrowser,emoji,combi,calc";
+	modes: "window,drun,run,ssh,filebrowser,emoji,combi";
     font: "Hack 12";
 /*	location: 0;*/
 /*	yoffset: 0;*/
