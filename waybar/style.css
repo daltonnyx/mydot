@@ -11,6 +11,11 @@ window#waybar {
 	background: transparent;
 }
 
+/* .module { */
+/*   padding-top:1px; */
+/*   padding-bottom: 1px; */
+/* } */
+/**/
 window#waybar.hidden {
 	opacity: 0.5;
 }
@@ -21,7 +26,7 @@ window#waybar.hidden {
 	padding-right: 10px;
 	border-radius: 8px;
 	transition: none;
-    color: @overlay0;
+  color: @overlay0;
 	background: transparent;
 }
 
@@ -48,8 +53,13 @@ window#waybar.hidden {
 
 #workspaces button {
   color: @overlay1;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#workspaces button:hover {
+  color: @overlay1;
+  background: transparent;
 }
 
 #workspaces button.active {
