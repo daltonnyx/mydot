@@ -60,6 +60,7 @@ window#waybar.hidden {
 #workspaces button:hover {
   color: @overlay1;
   background: transparent;
+  
 }
 
 #workspaces button.active {
