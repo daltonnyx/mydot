@@ -16,19 +16,21 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme = {}
 theme.dir = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-dark"
-theme.wallpaper = theme.dir .. "/wall2.jpg"
+theme.wallpaper = "~/Wallpapers/porsche-911-gt3-rs-rear-4k-3f.jpg"
 theme.font = "Hack 10"
 theme.fg_normal = "#ECEFF4"
 theme.fg_focus = "#D08770"
 theme.fg_urgent = "#CC9393"
-theme.bg_normal = "#2E3440"
-theme.bg_focus = "#4C566A"
-theme.bg_urgent = "#2E3440"
+theme.bg_normal = "#2E344080"
+theme.bg_focus = "#4C566A80"
+theme.bg_urgent = "#2E344090"
+theme.bg_transparent = "#00000000"
 theme.border_width = dpi(2)
 theme.border_normal = "#81A1C1"
 theme.border_focus = "#eba0ac"
 theme.border_marked = "#CC9393"
-theme.tasklist_bg_focus = "#2E3440"
+theme.tasklist_bg_focus = "#2E344040"
+theme.tasklist_bg_normal = theme.bg_transparent
 theme.titlebar_bg_focus = theme.bg_focus
 theme.titlebar_bg_normal = theme.bg_normal
 theme.titlebar_fg_focus = theme.fg_focus
@@ -349,7 +351,7 @@ function theme.at_screen_connect(s)
 
 	-- Create the wibox
 	s.mywibox =
-		awful.wibar({ position = "top", screen = s, height = dpi(22), bg = theme.bg_normal, fg = theme.fg_normal })
+		awful.wibar({ position = "bottom", screen = s, height = dpi(22), bg = theme.bg_normal, fg = theme.fg_normal })
 
 	-- Add widgets to the wibox
 	s.mywibox:setup({

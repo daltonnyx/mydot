@@ -93,6 +93,7 @@ awful.spawn.with_shell(
 naughty.config.defaults.icon_size = 32
 naughty.config.defaults.hover_timeout = 120
 naughty.config.defaults.margin = 16
+naughty.config.defaults.timeout = 2
 naughty.config.defaults.shape = function(cr, w, h)
 	gears.shape.infobubble(cr, w, h)
 end
@@ -126,6 +127,7 @@ local browser = "firefox-developer-edition"
 awful.util.terminal = terminal
 awful.util.tagnames = { "ST", "clients", "code", "fun" }
 awful.layout.layouts = {
+	lain.layout.cascade.tile,
 	awful.layout.suit.magnifier,
 	awful.layout.suit.tile,
 	--awful.layout.suit.floating,
@@ -144,11 +146,19 @@ awful.layout.layouts = {
 	--awful.layout.suit.corner.se,
 	--lain.layout.centerwork,
 	-- lain.layout.cascade,
-	lain.layout.cascade.tile,
 	--lain.layout.centerwork.horizontal,
 	--lain.layout.termfair,
 	--lain.layout.termfair.center
 }
+
+local tag_name = { "ST", "clients", "code", "fun" }
+local tag_layout = {
+	awful.layout.suit.magnifier,
+	lain.layout.cascade.tile,
+	awful.layout.suit.spiral,
+	awful.layout.suit.max,
+}
+awful.tag(tag_name, s, tag_layout)
 
 lain.layout.termfair.nmaster = 3
 lain.layout.termfair.ncol = 1
