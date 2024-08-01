@@ -93,7 +93,7 @@ awful.spawn.with_shell(
 naughty.config.defaults.icon_size = 32
 naughty.config.defaults.hover_timeout = 120
 naughty.config.defaults.margin = 10
-naughty.config.defaults.timeout = 2
+naughty.config.defaults.timeout = 3
 naughty.config.defaults.shape = function(cr, w, h)
 	gears.shape.partially_rounded_rect(cr, w, h, true, true, false, true, 30)
 end
