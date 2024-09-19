@@ -294,7 +294,7 @@ function theme.at_screen_connect(s)
 	local tag_layout = {
 		awful.layout.suit.magnifier,
 		lain.layout.cascade.tile,
-		awful.layout.suit.spiral,
+		awful.layout.suit.tile,
 		awful.layout.suit.max,
 	}
 	awful.tag(awful.util.tagnames, s, tag_layout)

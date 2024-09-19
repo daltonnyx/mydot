@@ -288,7 +288,8 @@ screen.connect_signal("arrange", function(s)
 	local only_one = #s.tiled_clients == 1
 	for _, c in pairs(s.clients) do
 		if c.floating or c.maximized then
-			c.border_width = 0
+			c.border_width = 2
+			c.border_color = beautiful.border_focus
 		else
 			c.border_width = beautiful.border_width
 		end
@@ -326,7 +327,9 @@ globalkeys = mytable.join(
 	awful.key({ altkey }, "p", function()
 		os.execute("screenshot")
 	end, { description = "take a screenshot", group = "hotkeys" }),
-
+	awful.key({ modkey, "Shift" }, "s", function()
+		os.execute("scrot --select $HOME/Screenshots/'%Y-%m-%d_%H-%M-%S.png'")
+	end, { description = "take a screenshot", group = "hotkeys" }),
 	-- X screen locker
 	awful.key({ altkey, "Control" }, "l", function()
 		os.execute(scrlocker)
@@ -580,9 +583,13 @@ globalkeys = mytable.join(
 	awful.key({ modkey, "Control" }, "q", function()
 		awful.spawn("lock_screen")
 	end, { description = "lock screen", group = "hotkeys" }),
-	awful.key({ modkey, "Control" }, "m", function()
-		awful.spawn("warpd --hint")
+	awful.key({ modkey, "Control" }, "/", function()
+		awful.spawn.with_shell("warpd --hint2 --oneshot; warpd --click 1")
+	end, { description = "mouse fast click", group = "hotkeys" }),
+	awful.key({ modkey, "Shift" }, "/", function()
+		awful.spawn.with_shell("warpd --normal")
 	end, { description = "mouse control", group = "hotkeys" }),
+
 	-- User programs
 	--awful.key({ modkey }, "q", function () awful.spawn(browser) end,
 	--          {description = "run browser", group = "launcher"}),
