@@ -1,6 +1,6 @@
 configuration {
 	modes: "window,drun,run,ssh,filebrowser,emoji,combi";
-    font: "Hack 12";
+    font: "Hack Nerd Font 12";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/

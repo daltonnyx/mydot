@@ -9,12 +9,12 @@ reset() {
   pkill -f "hyprpaper"
 }
 main() {
-  local play_menu="Play/Pause"
-  local next_menu="Next"
-  local prev_menu="Previous"
-  local search_menu="Search"
-  local end_menu="End"
-  local music_menu="Music"
+  local play_menu="󰐎 Play/Pause"
+  local next_menu="󰒭 Next"
+  local prev_menu="󰒮 Previous"
+  local search_menu="  Search"
+  local end_menu="󰈆 End"
+  local music_menu="󰝚 Music"
   local play
   local option=$(echo -e "$play_menu\n$next_menu\n$prev_menu\n$search_menu\n$music_menu\n$end_menu" | rofi -theme catppuccin-macchiato -show-icons -icon-theme 'Papirus' -dmenu -p "Youtube: ")
 
