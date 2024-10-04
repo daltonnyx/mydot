@@ -271,6 +271,17 @@ window#waybar.hidden {
 	background: @flamingo;
 }
 
+#mpris {
+	margin-top: 6px;
+	margin-left: 6px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	border-radius: 4px;
+	transition: none;
+	color: @overlay0;
+	background: @blue;
+}
 #custom-launcher {
 	font-size: 24px;
 	margin-top: 6px;
