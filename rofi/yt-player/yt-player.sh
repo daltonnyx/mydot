@@ -38,7 +38,7 @@ main() {
       IFS=$'\n'
       echo "${titles[*]}"
     )
-    local play=$(echo "$printedtitles" | rofi -theme catppuccin-macchiato -show-icons -icon-theme 'Papirus' -dmenu -p "Play: ")
+    local play=$(echo "$printedtitles" | rofi -theme-str "#listview {columns: 1;}" -theme catppuccin-macchiato -show-icons -icon-theme 'Papirus' -dmenu -p "Play: ")
     local index=0
     for title in "${titles[@]}"; do
       if [ "$title" == "$play" ]; then
@@ -48,7 +48,7 @@ main() {
     done
     reset
 
-    mpvpaper --mpv-options="--no-audio-display --loop --ytdl-format=\"bestvideo[height<1081]+bestaudio\"" HDMI-A-1 "ytdl://ytsearch:$play"
+    mpvpaper --mpv-options="--no-audio-display --ytdl-format=\"bestvideo[height<1081]+bestaudio\"" HDMI-A-1 "ytdl://ytsearch:$play"
     ;;
   $music_menu)
     local search=$(rofi -theme catppuccin-macchiato -show-icons -icon-theme 'Papirus' -dmenu -p "Search: ")
@@ -67,7 +67,7 @@ main() {
       IFS=$'\n'
       echo "${titles[*]}"
     )
-    local play=$(echo "$printedtitles" | rofi -theme catppuccin-macchiato -show-icons -icon-theme 'Papirus' -dmenu -p "Play: ")
+    local play=$(echo "$printedtitles" | rofi -theme catppuccin-macchiato -theme-str "#listview {columns: 1;}" -show-icons -icon-theme 'Papirus' -dmenu -p "Play: ")
     local index=0
     for title in "${titles[@]}"; do
       if [ "$title" == "$play" ]; then
