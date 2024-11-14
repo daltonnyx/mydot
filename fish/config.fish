@@ -4,13 +4,16 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     alias vim="nvim"
     alias nvimdiff="nvim -d"
+    alias airpod_connect="bluetoothctl connect AC:C9:06:53:F9:1B"
+    alias airpod_disconnect="bluetoothctl disconnect AC:C9:06:53:F9:1B"
+    alias start_docker="sudo systemctl start docker"
     set _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
 
     function vim_cs -d "Print vim cheat sheet"
         w3m https://vim.rtorr.com/
     end
-    function weath_dn -d "Show today weather"
-        curl wttr.in/Danang\?2
+    function weather -d "Show today weather"
+        curl v2d.wttr.in/Danang
     end
     fzf_configure_bindings --directory=\cf --git_log=\cg
     set fzf_fd_opts --hidden --exclude=.git --exclude=.vscode --exclude=.npm --exclude=.nvm --exclude=.nx --exclude=.mozilla

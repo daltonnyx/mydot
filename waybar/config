@@ -5,7 +5,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["clock", "custom/sydtime", "mpris", "tray", "hyprland/submap"], //, "hyprland/window", "keyboard-state"],
+    "modules-left": ["clock", "custom/weather", "mpris", "tray", "hyprland/submap"], //, "hyprland/window", "keyboard-state"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": [ "custom/blue_bat", "pulseaudio", "network", "cpu", "memory", "backlight", "battery"],
     // Modules configuration
@@ -177,6 +177,11 @@
       "exec": "env TZ='Australia/Sydney' date +'%H:%M SYD'",
       "interval": 20,
       "tooltip": false
+    },
+    "custom/weather": {
+        "exec": "curl wttr.in/Danang\\?format=\"%l+%p+%t\"",
+        "interval": 600,
+        "tooltip": false
     },
     "custom/blue_bat": {
       "exec": "$HOME/.config/waybar/script/bat.sh",
