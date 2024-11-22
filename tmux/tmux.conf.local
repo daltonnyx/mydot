@@ -377,9 +377,9 @@ bind C-w kill-pane
 
 # move status line to top
 set -g status-position bottom
-set -g allow-passthrough all
-set -ga update-environment TERM
-set -ga update-environment TERM_PROGRAM
+# set -g allow-passthrough all
+# set -ga update-environment TERM
+# set -ga update-environment TERM_PROGRAM
 
 
 # -- tpm -----------------------------------------------------------------------
