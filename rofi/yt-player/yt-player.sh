@@ -55,7 +55,7 @@ main() {
     done
     reset
 
-    mpvpaper --mpv-options="--no-audio-display --ytdl-format=\"bestvideo[height<1081]+bestaudio\"" HDMI-A-1 "ytdl://ytsearch:$play"
+    mpvpaper --mpv-options="--no-audio-display --loop-playlist=inf --ytdl-format=\"bestvideo[height<1081]+bestaudio\"" HDMI-A-1 "ytdl://ytsearch:$play"
     ;;
   $music_menu)
     local search=$(rofi -theme catppuccin-macchiato -show-icons -icon-theme 'Papirus' -dmenu -p "Search: ")
@@ -83,7 +83,7 @@ main() {
       index=$((index + 1))
     done
     reset music
-    mpv --no-audio-display --ytdl-format="bestaudio" "${urls[$index]}"
+    mpv --no-audio-display --loop-playlist=inf --ytdl-format="bestaudio" "${urls[$index]}"
     ;;
   $end_menu)
     reset

@@ -5,11 +5,11 @@ handle() {
   submap*)
     submap="${line/submap>>/}"
     if [ "$submap" == "mousemove" ]; then
-      hyprctl keyword input:repeat_delay 20
-      hyprctl keyword input:repeat_rate 100
+      hyprctl keyword input:repeat_delay 20 >/dev/null
+      hyprctl keyword input:repeat_rate 100 >/dev/null
     else
-      hyprctl keyword input:repeat_delay 400
-      hyprctl keyword input:repeat_rate 50
+      hyprctl keyword input:repeat_delay 400 >/dev/null
+      hyprctl keyword input:repeat_rate 50 >/dev/null
     fi
     ;;
   esac
