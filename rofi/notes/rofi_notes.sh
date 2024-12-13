@@ -49,6 +49,7 @@ note_context() {
 
 git_sync() {
   cd "$NOTES_FOLDER" || exit
+  git fetch && git pull
   git add .
   git commit -m "Sync notes"
   git push
