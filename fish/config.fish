@@ -19,7 +19,7 @@ if status is-interactive
     set fzf_fd_opts --hidden --exclude=.git --exclude=.vscode --exclude=.npm --exclude=.nvm --exclude=.nx --exclude=.mozilla
     if test "$(fgconsole)" = 1
         #startx
-        Hyprland
+        prime-run Hyprland
     end
     #if status is-interactive
     #and not set -q TMUX 

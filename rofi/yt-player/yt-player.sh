@@ -53,6 +53,10 @@ main() {
       fi
       index=$((index + 1))
     done
+    if [ -z "$play" ]; then
+      return
+    fi
+
     reset
 
     mpvpaper --mpv-options="--no-audio-display --loop-playlist=inf --ytdl-format=\"bestvideo[height<1081]+bestaudio\"" HDMI-A-1 "ytdl://ytsearch:$play"
