@@ -1,19 +1,19 @@
 #!/bin/sh
 
 handle() {
-	case $1 in
-	openlayer*)
-		if [[ "$1" == "openlayer>>lockscreen" ]]; then
-			dunstctl set-paused true
-		fi
-		;;
-	closelayer*)
-		if [[ "$1" == "closelayer>>lockscreen" ]]; then
-			dunstctl set-paused false
-		fi
+  case $1 in
+  openlayer*)
+    if [[ "$1" == "openlayer>>lockscreen" ]]; then
+      dunstctl set-paused true
+    fi
+    ;;
+  closelayer*)
+    if [[ "$1" == "closelayer>>lockscreen" ]]; then
+      dunstctl set-paused false
+    fi
 
-		;;
-	esac
+    ;;
+  esac
 }
 
-socat -U - UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock | while read -r line; do handle "$line"; done
+socat -U - UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock | while read -r line; do handle "$line"; done

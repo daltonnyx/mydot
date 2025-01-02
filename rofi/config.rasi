@@ -151,4 +151,4 @@ configuration {
 }
 //@theme "Arc-Dark"
 //@theme "/home/quy.truong/.local/share/rofi/themes/nord.rasi"
-@theme "/home/quy.truong/.local/share/rofi/themes/squared-everforest.rasi"
+@theme "~/.local/share/rofi/themes/squared-everforest.rasi"
