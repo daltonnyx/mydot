@@ -356,7 +356,7 @@ tmux_conf_copy_to_os_clipboard=true
 #set -g history-limit 10000
 
 # start with mouse mode enabled
-#set -g mouse on
+set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -377,6 +377,9 @@ bind C-w kill-pane
 
 # move status line to top
 set -g status-position bottom
+# set -g allow-passthrough all
+# set -ga update-environment TERM
+# set -ga update-environment TERM_PROGRAM
 
 
 # -- tpm -----------------------------------------------------------------------

@@ -10,6 +10,4 @@ vim.keymap.set("n", "<leader>gB", function()
   Util.terminal({ "tig", "blame", vim.fn.expand("%") }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false })
 end, { desc = "Open tig blame" })
 
-vim.keymap.set("n", "<leader>wc", function()
-  require("dbee").open()
-end, { desc = "Open dbee" })
+vim.keymap.set("n", "<leader>wc", ":CopilotChat<CR>", { desc = "Open Copilot Chat" })

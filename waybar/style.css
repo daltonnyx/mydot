@@ -24,7 +24,7 @@ window#waybar.hidden {
 	margin-top: 6px;
 	padding-left: 10px;
 	padding-right: 10px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
   color: @overlay0;
 	background: transparent;
@@ -36,7 +36,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
     background: @rosewater;
 }
@@ -46,7 +46,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
     background: @red;
 }
@@ -72,7 +72,7 @@ window#waybar.hidden {
 	margin-left: 12px;
 	font-size: 4px;
 	margin-bottom: 0px;
-	border-radius: 8px;
+	border-radius: 4px;
 	background: #161320;
 	transition: none;
 }
@@ -117,7 +117,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
 	color: @overlay0;
 	background: @blue;
@@ -129,7 +129,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
 	color: @overlay0;
 	background: @lavender;
@@ -142,7 +142,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
 	color: @overlay0;
 	background: @sapphire;
@@ -176,7 +176,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
 	color: @overlay0;
 	background: @yellow;
@@ -187,20 +187,20 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
 	color: @overlay0;
 	background: @pink;
 	/*background: #1A1826;*/
 }
 
-#custom-sydtime {
+#custom-weather {
 	margin-top: 6px;
 	margin-left: 6px;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
 	color: @overlay0;
 	background: @lavender;
@@ -213,7 +213,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
 	color: @overlay0;
 	background: @pink;
@@ -226,7 +226,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	margin-bottom: 0px;
 	padding-right: 10px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
 	color: @overlay0;
 	background: @peach;
@@ -237,7 +237,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	margin-bottom: 0px;
 	padding-right: 10px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
 	color: @overlay0;
 	background: @maroon;
@@ -249,7 +249,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	margin-bottom: 0px;
 	padding-right: 12px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
 	color: @overlay0;
 	background: @lavender;
@@ -265,19 +265,30 @@ window#waybar.hidden {
 	padding-left: 10px;
 	margin-bottom: 0px;
 	padding-right: 10px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
 	color: @overlay0;
 	background: @flamingo;
 }
 
+#mpris {
+	margin-top: 6px;
+	margin-left: 6px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	border-radius: 4px;
+	transition: none;
+	color: @overlay0;
+	background: @blue;
+}
 #custom-launcher {
 	font-size: 24px;
 	margin-top: 6px;
 	margin-left: 6px;
 	padding-left: 10px;
 	padding-right: 5px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
     color: #89DCEB;
     background: #161320;
@@ -291,7 +302,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 5px;
 	margin-bottom: 0px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
 	color: #161320;
 	background: #F28FAD;
@@ -303,7 +314,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
 	color: #161320;
 	background: #C9CBFF;
@@ -315,7 +326,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
 	color: #161320;
 	background: #E8A2AF;
@@ -327,7 +338,7 @@ window#waybar.hidden {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
-	border-radius: 8px;
+	border-radius: 4px;
 	transition: none;
 	color: #161320;
 	background: #F2CDCD;
