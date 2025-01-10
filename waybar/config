@@ -184,7 +184,7 @@
         "tooltip": false
     },
     "custom/blue_bat": {
-      "exec": "$HOME/.config/waybar/script/bat.sh",
+      "exec": "killall bat.sh && $HOME/.config/waybar/script/bat.sh",
       "interval": 600,
       "tooltip": false
     }

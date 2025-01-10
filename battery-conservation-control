@@ -1,0 +1,17 @@
+#!/bin/bash
+# /usr/local/bin/battery-conservation-control
+
+# Get current battery percentage
+BATTERY_LEVEL=$(cat /sys/class/power_supply/BAT1/capacity)
+
+# Path to conservation mode
+CONSERVATION_MODE="/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode"
+
+# Check if battery level is <= 55% or >= 90%
+if [ "$BATTERY_LEVEL" -le 55 ]; then
+    # Disable conservation mode to allow charging
+    echo 0 > "$CONSERVATION_MODE"
+elif [ "$BATTERY_LEVEL" -ge 90 ]; then
+    # Enable conservation mode to stop charging
+    echo 1 > "$CONSERVATION_MODE"
+fi
