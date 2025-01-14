@@ -1,6 +1,6 @@
 # Monitor battery capacity changes
 SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", \
-ATTR{capacity}=="[0-9]*", RUN+="/usr/local/bin/battery-conservation-control"
+ATTR{capacity}=="[0-9]*", RUN+="/usr/local/bin/battery-conservation-control stop"
 
 SUBSYSTEM=="power_supply", ATTR{status}=="Charging", \
-ATTR{capacity}=="[0-9]*", RUN+="/usr/local/bin/battery-conservation-control"
+ATTR{capacity}=="[0-9]*", RUN+="/usr/local/bin/battery-conservation-control start"

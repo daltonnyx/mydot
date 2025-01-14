@@ -4,3 +4,6 @@
 ACTION=="change", SUBSYSTEM=="power_supply", ATTRS{type}=="Mains", ATTRS{online}=="0", RUN+="/usr/bin/brightnessctl set 25%%"
 # Rule for when switching to AC
 ACTION=="change", SUBSYSTEM=="power_supply", ATTRS{type}=="Mains", ATTRS{online}=="1", RUN+="/usr/bin/brightnessctl set 100%%"
+
+#Kill unnecessary services when on battery
+ACTION=="change", SUBSYSTEM=="power_supply", ATTRS{type}=="Mains", ATTRS{online}=="0", RUN+="killall sunshine"
