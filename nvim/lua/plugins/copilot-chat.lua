@@ -12,8 +12,8 @@ return {
       window = {
         layout = "float",
         relative = "cursor",
-        width = 1,
-        height = 0.4,
+        width = 0.8,
+        height = 0.8,
         row = 1,
       },
     },
