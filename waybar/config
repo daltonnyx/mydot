@@ -5,9 +5,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["clock", "custom/weather", "mpris", "tray", "hyprland/submap"], //, "hyprland/window", "keyboard-state"],
+    "modules-left": ["clock", "custom/weather", "mpris",  "hyprland/submap"], //, "hyprland/window", "keyboard-state"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": [ "custom/blue_bat", "pulseaudio", "network", "cpu", "memory", "backlight", "battery"],
+    "modules-right": [ "tray", "custom/blue_bat", "pulseaudio", "backlight", "battery"],
     // Modules configuration
     "hyprland/submap": {
         "format": "{}",
@@ -152,8 +152,8 @@
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "hands-free": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
@@ -184,7 +184,7 @@
         "tooltip": false
     },
     "custom/blue_bat": {
-      "exec": "killall bat.sh && $HOME/.config/waybar/script/bat.sh",
+      "exec": "$HOME/.config/waybar/script/bat.sh",
       "interval": 600,
       "tooltip": false
     }
