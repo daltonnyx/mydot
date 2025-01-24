@@ -87,7 +87,7 @@ new_note() {
 
 main() {
   local all_notes="$(get_notes)"
-  local first_menu="New"
+  local first_menu="New\nSync"
 
   if [ "$all_notes" ]; then
     first_menu="New\nSync\n${all_notes}"
