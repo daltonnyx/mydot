@@ -9,7 +9,7 @@ BATTERY_STATUS=$(cat /sys/class/power_supply/BAT1/status)
 CONSERVATION_MODE="/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode"
 
 # Check if battery level is <= 55% or >= 90%
-if [ "$BATTERY_LEVEL" -le 55 ]; then
+if [ "$BATTERY_LEVEL" -le 75 ]; then
   # Disable conservation mode to allow charging
   echo 0 >"$CONSERVATION_MODE"
 elif [ "$BATTERY_LEVEL" -ge 90 ]; then

@@ -45,7 +45,6 @@ return {
         -- with blink.compat
         compat = { "avante_commands", "avante_mentions", "avante_files" },
         default = { "lsp", "path", "snippets", "buffer" },
-        cmdline = {},
       },
 
       keymap = {

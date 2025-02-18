@@ -15,10 +15,14 @@ if status is-interactive
     function weather -d "Show today weather"
         curl v2d.wttr.in/Danang
     end
+    function start_sts_vpn -d "Connect to STS networks"
+        systemctl start forticlient
+        forticlient vpn connect STS-VPN --save-password
+    end
     fzf_configure_bindings --directory=\cf --git_log=\cg
     set fzf_fd_opts --hidden --exclude=.git --exclude=.vscode --exclude=.npm --exclude=.nvm --exclude=.nx --exclude=.mozilla
     if test "$(fgconsole)" = 1
-        Hyprland
+        Hyprland -c /home/$USER/.config/hypr/hyprland-scroll.conf
     end
     #if status is-interactive
     #and not set -q TMUX 
@@ -27,3 +31,6 @@ if status is-interactive
     #    exec tmux new -As 0
     #end
 end
+
+# uv
+fish_add_path "/home/quytruong/.local/bin"
