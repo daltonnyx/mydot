@@ -10,9 +10,13 @@ return {
     -- currently designating it as `copilot` provider is dangerous because: https://github.com/yetone/avante.nvim/issues/1048
     -- Of course, you can reduce the request frequency by increasing `suggestion.debounce`.
     auto_suggestions_provider = "claude",
+    cursor_applying_provider = "claude",
+    behavior = {
+      enable_cursor_planning_mode = true,
+    },
     claude = {
       endpoint = "https://api.anthropic.com",
-      model = "claude-3-5-sonnet-20241022",
+      model = "claude-3-7-sonnet-20250219",
       temperature = 0,
       max_tokens = 4096,
     },

@@ -7,6 +7,7 @@ if status is-interactive
     alias airpod_connect="bluetoothctl connect AC:C9:06:53:F9:1B"
     alias airpod_disconnect="bluetoothctl disconnect AC:C9:06:53:F9:1B"
     alias start_docker="sudo systemctl start docker"
+    alias uvm="uv run main.py"
     set _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
 
     function vim_cs -d "Print vim cheat sheet"
