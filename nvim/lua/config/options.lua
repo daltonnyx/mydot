@@ -11,6 +11,8 @@ opt.diffopt:append("iwhite")
 -- Lines of context
 opt.scrolloff = 8
 
+opt.laststatus = 3
+
 if vim.env.SSH_TTY then
   opt.clipboard:append("unnamedplus")
   -- local function paste()
