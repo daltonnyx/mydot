@@ -32,3 +32,4 @@ if vim.env.SSH_TTY then
 end
 vim.g.mkdp_theme = "light"
 vim.g.mkdp_markdown_css = vim.fn.expand("~/.config/nvim/lua/extras/markdown-preview.css")
+opt.textwidth = 100
