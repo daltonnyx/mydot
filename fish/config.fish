@@ -1,4 +1,3 @@
-
 if status is-interactive
     fish_add_path /home/$USER/.dotnet
     # Commands to run in interactive sessions can go here
@@ -8,6 +7,7 @@ if status is-interactive
     alias airpod_disconnect="bluetoothctl disconnect AC:C9:06:53:F9:1B"
     alias start_docker="sudo systemctl start docker"
     alias uvm="uv run main.py"
+    alias icat="kitten icat"
     set _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
 
     function vim_cs -d "Print vim cheat sheet"
