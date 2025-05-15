@@ -3,8 +3,8 @@
 --})
 
 return {
-  "nvim-notify",
-  opts = {
-    background_colour = "#b7bdf8",
-  },
+  -- "nvim-notify",
+  -- opts = {
+  --   background_colour = "#b7bdf8",
+  -- },
 }
