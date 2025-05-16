@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["clock", "custom/weather", "mpris",  "hyprland/submap"], //, "hyprland/window", "keyboard-state"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": [ "tray", "custom/power_profile", "custom/blue_bat", "pulseaudio", "backlight", "battery"],
+    "modules-right": [ "tray", "custom/blue_bat", "pulseaudio", "backlight", "custom/power_profile", "battery"],
     // Modules configuration
     "hyprland/submap": {
         "format": "{}",
@@ -190,6 +190,8 @@
     },
     "custom/power_profile": {
       "exec": "$HOME/.config/waybar/script/power-profile.sh",
+      "format": "{text}",
+      "return-type": "json",
       "interval": 3,
       "tooltip": false
     }

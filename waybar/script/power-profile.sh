@@ -24,11 +24,21 @@ if [[ -r "$PROFILE_FILE" ]]; then
     ;;
   esac
 
-  echo "$ICON"
+  FIRST_TEMP=$(cat /proc/acpi/ibm/thermal 2>/dev/null | awk '{print $2}')
+
+  # Output the icon. If FIRST_TEMP has a value, append it.
+  if [[ -n "$FIRST_TEMP" ]]; then
+    printf "{\"text\": \"$ICON $FIRST_TEMP°C\", \"class\": \"$CURRENT_PROFILE\"}"
+  else
+    # If FIRST_TEMP is empty (e.g., temp file not found or awk failed), just print the icon
+    printf "{\"text\":\"$ICON\"}"
+  fi
+
 else
   # Output an error icon or message if the file can't be read
   # Consider stderr for error messages if this script is part of a larger system
-  echo "" # Warning icon if profile file is not accessible
+  ICON="" # Warning icon if profile file is not accessible
+  printf "{\"text\":\"$ICON\"}"
   # Or, for a more descriptive error message:
   # echo "Error: Cannot read $PROFILE_FILE" >&2
 fi

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-devices=('F3:2E:12:1C:32:F9' 'DE:F1:36:6E:87:E8' 'F4:4E:FD:31:ED:9C')
+devices=('F3:2E:12:1C:32:FB' '12:34:50:57:1B:80' 'F4:4E:FD:31:ED:9C')
 icons=('󰥻' '󰍽' '')
 
 for ((i = 0; i < ${#devices[@]}; i++)); do
