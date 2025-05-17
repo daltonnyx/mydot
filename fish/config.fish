@@ -2,6 +2,7 @@ if status is-interactive
     fish_add_path /home/$USER/.dotnet
     # Commands to run in interactive sessions can go here
     alias vim="nvim"
+    alias ls="eza"
     alias nvimdiff="nvim -d"
     alias airpod_connect="bluetoothctl connect AC:C9:06:53:F9:1B"
     alias airpod_disconnect="bluetoothctl disconnect AC:C9:06:53:F9:1B"
@@ -22,9 +23,6 @@ if status is-interactive
     end
     fzf_configure_bindings --directory=\cf --git_log=\cg
     set fzf_fd_opts --hidden --exclude=.git --exclude=.vscode --exclude=.npm --exclude=.nvm --exclude=.nx --exclude=.mozilla
-    if test "$(fgconsole)" = 1
-        Hyprland -c /home/$USER/.config/hypr/hyprland-scroll.conf
-    end
     #if status is-interactive
     #and not set -q TMUX 
     #and test "$TERM" = "xterm-kitty"
@@ -35,3 +33,4 @@ end
 
 # uv
 fish_add_path "/home/quytruong/.local/bin"
+nvm use lts

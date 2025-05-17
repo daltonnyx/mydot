@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["clock", "custom/weather", "mpris",  "hyprland/submap"], //, "hyprland/window", "keyboard-state"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": [ "tray", "custom/blue_bat", "pulseaudio", "backlight", "custom/power_profile", "battery"],
+    "modules-right": [ "tray", "custom/blue_bat", "pulseaudio", "backlight", "cpu", "custom/power_profile", "battery"],
     // Modules configuration
     "hyprland/submap": {
         "format": "{}",
@@ -97,7 +97,8 @@
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": false,
+        "interval": 3
     },
     "memory": {
         "format": "{}% "
