@@ -19,7 +19,7 @@ if status is-interactive
     end
     function start_sts_vpn -d "Connect to STS networks"
         systemctl start forticlient
-        forticlient vpn connect STS-VPN --save-password
+        forticlient vpn connect STS_VPN --save-password
     end
     fzf_configure_bindings --directory=\cf --git_log=\cg
     set fzf_fd_opts --hidden --exclude=.git --exclude=.vscode --exclude=.npm --exclude=.nvm --exclude=.nx --exclude=.mozilla
