@@ -13,6 +13,14 @@ handle() {
     fi
     ;;
   esac
+  case $line in
+  destroyworkspacev2*)
+    workspace="${line/destroyworkspacev2>>/}"
+    if [ "$workspace" == "-99,special:special" ]; then
+      hyprctl dispatch submap reset
+    fi
+    ;;
+  esac
 }
 
 socat -U - UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock | while read -r line; do handle "$line"; done

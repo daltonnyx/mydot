@@ -1,14 +1,14 @@
 @import "macchiato.css";
 * {
-	border: none;
-	border-radius: 10px;
-  font-family: "Hack Nerd Font" ;
-	font-size: 17px;
-	min-height: 10px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Hack Nerd Font";
+  font-size: 17px;
+  min-height: 10px;
 }
 
 window#waybar {
-	background: transparent;
+  background: transparent;
 }
 
 /* .module { */
@@ -17,38 +17,38 @@ window#waybar {
 /* } */
 /**/
 window#waybar.hidden {
-	opacity: 0.5;
+  opacity: 0.5;
 }
 
 #window {
-	margin-top: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 4px;
-	transition: none;
+  margin-top: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  transition: none;
   color: @overlay0;
-	background: transparent;
+  background: transparent;
 }
 
 #workspaces {
-    margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	transition: none;
-    background: @rosewater;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  transition: none;
+  background: @rosewater;
 }
 #submap {
-    margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	transition: none;
-    background: @red;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  transition: none;
+  background: @red;
 }
 
 #workspaces button {
@@ -60,177 +60,190 @@ window#waybar.hidden {
 #workspaces button:hover {
   color: @overlay1;
   background: transparent;
-  
 }
 
 #workspaces button.active {
-    color: @sapphire;
+  color: @sapphire;
 }
 
 #tags {
-	margin-top: 6px;
-	margin-left: 12px;
-	font-size: 4px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	background: #161320;
-	transition: none;
+  margin-top: 6px;
+  margin-left: 12px;
+  font-size: 4px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  background: #161320;
+  transition: none;
 }
 
 #tags button {
-	transition: none;
-	color: #B5E8E0;
-	background: transparent;
-	font-size: 16px;
-	border-radius: 2px;
+  transition: none;
+  color: #b5e8e0;
+  background: transparent;
+  font-size: 16px;
+  border-radius: 2px;
 }
 
 #tags button.occupied {
-	transition: none;
-	color: #F28FAD;
-	background: transparent;
-	font-size: 4px;
+  transition: none;
+  color: #f28fad;
+  background: transparent;
+  font-size: 4px;
 }
 
 #tags button.focused {
-	color: #ABE9B3;
-    border-top: 2px solid #ABE9B3;
-    border-bottom: 2px solid #ABE9B3;
+  color: #abe9b3;
+  border-top: 2px solid #abe9b3;
+  border-bottom: 2px solid #abe9b3;
 }
 
 #tags button:hover {
-	transition: none;
-	box-shadow: inherit;
-	text-shadow: inherit;
-	color: #FAE3B0;
-    border-color: #E8A2AF;
-    color: #E8A2AF;
+  transition: none;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: #fae3b0;
+  border-color: #e8a2af;
+  color: #e8a2af;
 }
 
 #tags button.focused:hover {
-    color: #E8A2AF;
+  color: #e8a2af;
 }
 
 #network {
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	transition: none;
-	color: @overlay0;
-	background: @blue;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  transition: none;
+  color: @overlay0;
+  background: @blue;
 }
 
 #pulseaudio {
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	transition: none;
-	color: @overlay0;
-	background: @lavender;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  transition: none;
+  color: @overlay0;
+  background: @lavender;
 }
 
 #battery {
-	margin-top: 6px;
-	margin-left: 6px;
-    margin-right: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	transition: none;
-	color: @overlay0;
-	background: @sapphire;
+  margin-top: 6px;
+  margin-left: 6px;
+  margin-right: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  transition: none;
+  color: @overlay0;
+  background: @sapphire;
 }
 
-#battery.charging, #battery.plugged {
-	color: @overlay0;
-    background-color: @sky;
+#battery.charging,
+#battery.plugged {
+  color: @overlay0;
+  background-color: @sky;
 }
 
 #battery.critical:not(.charging) {
-    background-color: @teal;
-    color: @overlay0;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  background-color: @teal;
+  color: @overlay0;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 @keyframes blink {
-    to {
-        background-color: @blue;
-        color: @overlay0;
-    }
+  to {
+    background-color: @blue;
+    color: @overlay0;
+  }
 }
 
 #backlight {
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	transition: none;
-	color: @overlay0;
-	background: @yellow;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  transition: none;
+  color: @overlay0;
+  background: @yellow;
 }
 #clock {
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	transition: none;
-	color: @overlay0;
-	background: @pink;
-	/*background: #1A1826;*/
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  transition: none;
+  color: @overlay0;
+  background: @pink;
+  /*background: #1A1826;*/
 }
 
 #custom-weather {
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	transition: none;
-	color: @overlay0;
-	background: @lavender;
-	/*background: #1A1826;*/
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  transition: none;
+  color: @overlay0;
+  background: @lavender;
+  /*background: #1A1826;*/
 }
 
 #custom-blue_bat {
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	transition: none;
-	color: @overlay0;
-	background: @pink;
-	/*background: #1A1826;*/
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  transition: none;
+  color: @overlay0;
+  background: @pink;
+  /*background: #1A1826;*/
+}
+
+#custom-special_workspace {
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  transition: none;
+  color: @overlay0;
+  background: @pink;
+  /*background: #1A1826;*/
 }
 
 #custom-power_profile {
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 6px;
-	padding-right: 6px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	transition: none;
-	color: @overlay0;
-	background: @pink;
-	/*background: #1A1826;*/
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  transition: none;
+  color: @overlay0;
+  background: @pink;
+  /*background: #1A1826;*/
 }
 #custom-power_profile.balanced {
   background: @sky;
@@ -243,125 +256,125 @@ window#waybar.hidden {
 }
 
 #memory {
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	margin-bottom: 0px;
-	padding-right: 10px;
-	border-radius: 4px;
-	transition: none;
-	color: @overlay0;
-	background: @peach;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  padding-right: 10px;
+  border-radius: 4px;
+  transition: none;
+  color: @overlay0;
+  background: @peach;
 }
 #cpu {
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	margin-bottom: 0px;
-	padding-right: 10px;
-	border-radius: 4px;
-	transition: none;
-	color: @overlay0;
-	background: @maroon;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  padding-right: 10px;
+  border-radius: 4px;
+  transition: none;
+  color: @overlay0;
+  background: @maroon;
 }
 
 #keyboard-state {
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	margin-bottom: 0px;
-	padding-right: 12px;
-	border-radius: 4px;
-	transition: none;
-	color: @overlay0;
-	background: @lavender;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  padding-right: 12px;
+  border-radius: 4px;
+  transition: none;
+  color: @overlay0;
+  background: @lavender;
 }
 
 #keyboard-state label.locked {
-    color: @red;
+  color: @red;
 }
 
 #tray {
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	margin-bottom: 0px;
-	padding-right: 10px;
-	border-radius: 4px;
-	transition: none;
-	color: @overlay0;
-	background: @flamingo;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  padding-right: 10px;
+  border-radius: 4px;
+  transition: none;
+  color: @overlay0;
+  background: @flamingo;
 }
 
 #mpris {
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	margin-bottom: 0px;
-	padding-right: 10px;
-	border-radius: 4px;
-	transition: none;
-	color: @overlay0;
-	background: @blue;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  padding-right: 10px;
+  border-radius: 4px;
+  transition: none;
+  color: @overlay0;
+  background: @blue;
 }
 #custom-launcher {
-	font-size: 24px;
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	padding-right: 5px;
-	border-radius: 4px;
-	transition: none;
-    color: #89DCEB;
-    background: #161320;
+  font-size: 24px;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  padding-right: 5px;
+  border-radius: 4px;
+  transition: none;
+  color: #89dceb;
+  background: #161320;
 }
 
 #custom-power {
-	font-size: 20px;
-	margin-top: 6px;
-	margin-left: 6px;
-	margin-right: 8px;
-	padding-left: 10px;
-	padding-right: 5px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	transition: none;
-	color: #161320;
-	background: #F28FAD;
+  font-size: 20px;
+  margin-top: 6px;
+  margin-left: 6px;
+  margin-right: 8px;
+  padding-left: 10px;
+  padding-right: 5px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  transition: none;
+  color: #161320;
+  background: #f28fad;
 }
 
 #custom-wallpaper {
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	transition: none;
-	color: #161320;
-	background: #C9CBFF;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  transition: none;
+  color: #161320;
+  background: #c9cbff;
 }
 
 #custom-updates {
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	transition: none;
-	color: #161320;
-	background: #E8A2AF;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  transition: none;
+  color: #161320;
+  background: #e8a2af;
 }
 
 #custom-media {
-	margin-top: 6px;
-	margin-left: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 4px;
-	transition: none;
-	color: #161320;
-	background: #F2CDCD;
+  margin-top: 6px;
+  margin-left: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  transition: none;
+  color: #161320;
+  background: #f2cdcd;
 }

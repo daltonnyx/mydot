@@ -5,7 +5,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["clock", "custom/weather", "mpris",  "hyprland/submap"], //, "hyprland/window", "keyboard-state"],
+    "modules-left": ["clock", "custom/weather", "mpris",  "hyprland/submap","custom/special_workspace"], //, "hyprland/window", "keyboard-state"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": [ "tray", "custom/blue_bat", "pulseaudio", "backlight", "cpu", "custom/power_profile", "battery"],
     // Modules configuration
@@ -187,6 +187,11 @@
     "custom/blue_bat": {
       "exec": "$HOME/.config/waybar/script/bat.sh",
       "interval": 600,
+      "tooltip": false
+    },
+    "custom/special_workspace": {
+      "exec": "$HOME/.config/waybar/script/special_workspace_windows.sh",
+      "interval": 3,
       "tooltip": false
     },
     "custom/power_profile": {
