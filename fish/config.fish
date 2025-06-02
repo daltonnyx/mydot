@@ -33,4 +33,4 @@ end
 
 # uv
 fish_add_path "/home/quytruong/.local/bin"
-nvm use lts
+. $HOME/.fishrc
