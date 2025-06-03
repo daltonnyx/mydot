@@ -13,10 +13,11 @@ main() {
   local next_menu="󰒭 Next"
   local prev_menu="󰒮 Previous"
   local search_menu="  Search"
+  local url_menu=" Play URL"
   local end_menu="󰈆 End"
   local music_menu="󰝚 Music"
   local play
-  local option=$(echo -e "$play_menu\n$next_menu\n$prev_menu\n$search_menu\n$music_menu\n$end_menu" | rofi -theme catppuccin-macchiato -show-icons -icon-theme 'Papirus' -dmenu -p "Youtube: ")
+  local option=$(echo -e "$play_menu\n$next_menu\n$prev_menu\n$search_menu\n$url_menu\n$music_menu\n$end_menu" | rofi -theme catppuccin-macchiato -show-icons -icon-theme 'Papirus' -dmenu -p "Youtube: ")
 
   case $option in
   $play_menu)
@@ -60,6 +61,14 @@ main() {
     reset
 
     mpvpaper --mpv-options="--no-audio-display --loop-playlist=inf --ytdl-format=\"bestvideo[height<1081]+bestaudio\"" '*' "ytdl://ytsearch:$play"
+    ;;
+  $url_menu)
+    local url=$(rofi -theme catppuccin-macchiato -show-icons -icon-theme 'Papirus' -dmenu -p "URL: ")
+    if [ -z "$url" ]; then
+      return
+    fi
+    reset
+    mpvpaper --mpv-options="--no-audio-display --loop-playlist=inf --ytdl-format=\"bestvideo[height<1081]+bestaudio\"" '*' "ytdl://$url"
     ;;
   $music_menu)
     local search=$(rofi -theme catppuccin-macchiato -show-icons -icon-theme 'Papirus' -dmenu -p "Search: ")
