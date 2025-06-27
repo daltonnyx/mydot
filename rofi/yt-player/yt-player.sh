@@ -60,7 +60,7 @@ main() {
 
     reset
 
-    mpvpaper --mpv-options="--no-audio-display --loop-playlist=inf --ytdl-format=\"bestvideo[height<1081]+bestaudio\"" '*' "ytdl://ytsearch:$play"
+    mpvpaper --mpv-options="--no-audio-display --loop-playlist=inf --ytdl-raw-options=\"yes-playlist=\" --ytdl-format=\"bestvideo+bestaudio\"" '*' "ytdl://ytsearch:$play"
     ;;
   $url_menu)
     local url=$(rofi -theme catppuccin-macchiato -show-icons -icon-theme 'Papirus' -dmenu -p "URL: ")
@@ -68,7 +68,7 @@ main() {
       return
     fi
     reset
-    mpvpaper --mpv-options="--no-audio-display --loop-playlist=inf --ytdl-format=\"bestvideo[height<1081]+bestaudio\"" '*' "ytdl://$url"
+    mpvpaper --mpv-options="--no-audio-display --loop-playlist=inf --ytdl-raw-options=\"yes-playlist=\" --ytdl-format=\"bestvideo+bestaudio\"" '*' "ytdl://$url"
     ;;
   $music_menu)
     local search=$(rofi -theme catppuccin-macchiato -show-icons -icon-theme 'Papirus' -dmenu -p "Search: ")
