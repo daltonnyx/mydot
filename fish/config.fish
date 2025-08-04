@@ -10,6 +10,7 @@ if status is-interactive
     alias uvm="uv run main.py"
     alias icat="kitten icat"
     set _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
+    set DOTNET_ROOT "$HOME/.dotnet"
 
     function vim_cs -d "Print vim cheat sheet"
         w3m https://vim.rtorr.com/
