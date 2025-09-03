@@ -15,7 +15,7 @@
         "tooltip": false
     },
     "hyprland/workspaces": {
-        "format": "{icon}",
+        "format": "{name}",
         "persistent-workspaces": {
             "HDMI-A-1": 1
         },
