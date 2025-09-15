@@ -8,6 +8,9 @@ for ((i = 0; i < ${#devices[@]}; i++)); do
   if [ -z "$percent" ]; then
     percent="0"
   fi
+  if [ "$percent" -eq "0" ]; then
+    continue
+  fi
   echo -n "$percent% ${icons[i]}"
   if [ $i -ne $((${#devices[@]} - 1)) ]; then
     echo -n " "
