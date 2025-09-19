@@ -24,7 +24,7 @@ window#waybar.hidden {
   margin-top: 6px;
   padding-left: 10px;
   padding-right: 10px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: @overlay0;
   background: transparent;
@@ -32,21 +32,21 @@ window#waybar.hidden {
 
 #workspaces {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   background: @rosewater;
 }
 #submap {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   background: @red;
 }
@@ -71,7 +71,7 @@ window#waybar.hidden {
   margin-left: 12px;
   font-size: 4px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   background: #161320;
   transition: none;
 }
@@ -81,7 +81,7 @@ window#waybar.hidden {
   color: #b5e8e0;
   background: transparent;
   font-size: 16px;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 #tags button.occupied {
@@ -112,11 +112,11 @@ window#waybar.hidden {
 
 #network {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: @overlay0;
   background: @blue;
@@ -124,11 +124,11 @@ window#waybar.hidden {
 
 #pulseaudio {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: @overlay0;
   background: @lavender;
@@ -136,12 +136,12 @@ window#waybar.hidden {
 
 #battery {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   margin-right: 6px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: @overlay0;
   background: @sapphire;
@@ -172,22 +172,22 @@ window#waybar.hidden {
 
 #backlight {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: @overlay0;
   background: @yellow;
 }
 #clock {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: @overlay0;
   background: @pink;
@@ -196,11 +196,11 @@ window#waybar.hidden {
 
 #custom-weather {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: @overlay0;
   background: @lavender;
@@ -209,11 +209,11 @@ window#waybar.hidden {
 
 #custom-blue_bat {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: @overlay0;
   background: @pink;
@@ -222,11 +222,11 @@ window#waybar.hidden {
 
 #custom-special_workspace {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: @overlay0;
   background: @pink;
@@ -235,11 +235,11 @@ window#waybar.hidden {
 
 #custom-power_profile {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 6px;
   padding-right: 6px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: @overlay0;
   background: @pink;
@@ -257,22 +257,22 @@ window#waybar.hidden {
 
 #memory {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   margin-bottom: 0px;
   padding-right: 10px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: @overlay0;
   background: @peach;
 }
 #cpu {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   margin-bottom: 0px;
   padding-right: 10px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: @overlay0;
   background: @maroon;
@@ -280,11 +280,11 @@ window#waybar.hidden {
 
 #keyboard-state {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   margin-bottom: 0px;
   padding-right: 12px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: @overlay0;
   background: @lavender;
@@ -296,11 +296,11 @@ window#waybar.hidden {
 
 #tray {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   margin-bottom: 0px;
   padding-right: 10px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: @overlay0;
   background: @flamingo;
@@ -308,11 +308,11 @@ window#waybar.hidden {
 
 #mpris {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   margin-bottom: 0px;
   padding-right: 10px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: @overlay0;
   background: @blue;
@@ -320,10 +320,10 @@ window#waybar.hidden {
 #custom-launcher {
   font-size: 24px;
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   padding-right: 5px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: #89dceb;
   background: #161320;
@@ -332,12 +332,12 @@ window#waybar.hidden {
 #custom-power {
   font-size: 20px;
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   margin-right: 8px;
   padding-left: 10px;
   padding-right: 5px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: #161320;
   background: #f28fad;
@@ -345,11 +345,11 @@ window#waybar.hidden {
 
 #custom-wallpaper {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: #161320;
   background: #c9cbff;
@@ -357,11 +357,11 @@ window#waybar.hidden {
 
 #custom-updates {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: #161320;
   background: #e8a2af;
@@ -369,11 +369,11 @@ window#waybar.hidden {
 
 #custom-media {
   margin-top: 6px;
-  margin-left: 6px;
+  margin-left: 4px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: none;
   color: #161320;
   background: #f2cdcd;
