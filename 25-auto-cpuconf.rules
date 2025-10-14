@@ -1,0 +1,7 @@
+# AUtomatically set brightness to 30% when AC is disconnected
+
+# Rule for when switching to battery
+ACTION=="change", SUBSYSTEM=="power_supply", ATTRS{type}=="Mains", ATTRS{online}=="0", RUN+="/usr/bin/cpuconf powersave"
+# Rule for when switching to AC
+ACTION=="change", SUBSYSTEM=="power_supply", ATTRS{type}=="Mains", ATTRS{online}=="1", RUN+="/usr/bin/cpuconf balanced"
+

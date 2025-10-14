@@ -4,7 +4,7 @@ tmux has-session -t yai 2>/dev/null
 
 if [ $? != 0 ]; then
   tmux new -d -s yai -n yai
-  tmux send-keys -t yai:yai "tmux set status off" Enter
+  tmux send-keys -t yai:yai "tmux set status on" Enter
   tmux send-keys -t yai:yai "clear" Enter
 
 fi
