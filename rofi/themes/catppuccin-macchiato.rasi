@@ -21,7 +21,7 @@ window {
     height: 360px;
     border: 0px;
     border-color: @border-col;
-    background-color: #24273a95;
+    background-color: #24273aa5;
 }
 
 mainbox {
