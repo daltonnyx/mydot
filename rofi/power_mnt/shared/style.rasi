@@ -18,15 +18,15 @@ configuration {
 
 * {
     /* Resolution : 1920x1080 */
-    box-spacing:                 50px;
-    box-margin:                  300px 200px;
+    box-spacing:                 25px;
+    box-margin:                  30px 90px;
     inputbar-spacing:            0px;
     list-spacing:                30px;
-    general-padding:             20px;
-    element-padding:             120px 10px;
+    general-padding:             10px;
+    element-padding:             20px 5px;
     element-radius:              100%;
     general-radius:              100%;
-    element-font:                "feather 64";
+    element-font:                "feather 24";
 }
 
 /*****----- Main Window -----*****/
@@ -35,8 +35,9 @@ window {
     transparency:                "real";
     location:                    center;
     anchor:                      center;
-    fullscreen:                  true;
-    width:                       1366px;
+    fullscreen:                  false;
+    width:                       600px;
+    height:                      220px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -45,7 +46,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               12px;
     border-color:                @selected;
     cursor:                      "default";
     background-color:            #24273acc;
