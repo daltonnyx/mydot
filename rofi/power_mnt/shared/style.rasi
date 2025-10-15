@@ -85,7 +85,7 @@ dummy {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "SYSTEM";
+    str:                         "Power Menu";
     padding:                     var(general-padding);
     border-radius:               100% 0px 0px 100%;
     background-color:            @urgent;

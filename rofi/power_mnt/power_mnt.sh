@@ -5,8 +5,9 @@ main() {
   local sleep_menu="󰒲 "
   local restart_menu="󰜉"
   local shutdown_menu="󰐥"
+  local uptime="$(uptime -p | sed -e 's/up //g')"
 
-  local option=$(echo -e "$lock_menu\n$sleep_menu\n$restart_menu\n$shutdown_menu" | rofi -theme /home/quytruong/.config/rofi/power_mnt/shared/style.rasi -dmenu -p "Power Menu: ")
+  local option=$(echo -e "$lock_menu\n$sleep_menu\n$restart_menu\n$shutdown_menu" | rofi -theme /home/quytruong/.config/rofi/power_mnt/shared/style.rasi -dmenu -p "$uptime")
 
   case $option in
   $lock_menu)
