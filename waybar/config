@@ -5,7 +5,7 @@
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["clock", "custom/weather", "mpris",  "hyprland/submap","custom/special_workspace"], //, "hyprland/window", "keyboard-state"],
+    "modules-left": ["clock", "custom/weather", "idle_inhibitor", "mpris",  "hyprland/submap","custom/special_workspace"], //, "hyprland/window", "keyboard-state"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": [ "tray", "custom/blue_bat", "pulseaudio", "backlight", "cpu", "custom/power_profile", "battery"],
     // Modules configuration
@@ -28,11 +28,11 @@
         "format-paused": "{status_icon} <i>{dynamic}</i>",
         "dynamic-len": 30,
         "player-icons": {
-          "default": "▶",
+          "default": "",
           "mpv": "🎵"
         },
         "status-icons": {
-          "paused": ""
+          "paused": "▶"
         }
       },
     "keyboard-state": {

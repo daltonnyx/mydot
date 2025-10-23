@@ -57,6 +57,17 @@ window#waybar.hidden {
   padding-right: 0px;
 }
 
+#idle_inhibitor {
+  margin-top: 6px;
+  margin-left: 4px;
+  padding-left: 10px;
+  padding-right: 18px;
+  margin-bottom: 0px;
+  border-radius: 3px;
+  transition: none;
+  background: @red;
+}
+
 #workspaces button:hover {
   color: @overlay1;
   background: transparent;
