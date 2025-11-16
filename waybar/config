@@ -6,8 +6,9 @@
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["clock", "custom/weather", "idle_inhibitor", "mpris",  "hyprland/submap","custom/special_workspace"], //, "hyprland/window", "keyboard-state"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["custom/weather","idle_inhibitor", "mpris",  "hyprland/submap","custom/special_workspace"], //, "hyprland/window", "keyboard-state"],
+    "modules-center": ["clock"],
+    // "modules-center": ["hyprland/workspaces"],
     "modules-right": [ "tray", "custom/blue_bat", "pulseaudio", "backlight", "cpu", "custom/power_profile", "battery"],
     // Modules configuration
     "hyprland/submap": {
@@ -95,7 +96,8 @@
         // "timezone": "Asia/Bangkok",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%m-%d/%H:%M}",
-        "format-alt": "{:%Y-%m-%d}",
+        "format-alt": "{:%H:%M:%S}",
+        "interval": 1
     },
     "cpu": {
         "format": "{usage}% ",
@@ -182,7 +184,7 @@
       "tooltip": false
     },
     "custom/weather": {
-        "exec": "curl wttr.in/Danang\\?format=\"%l+%p+%t\"",
+        "exec": "curl wttr.in/Danang\\?format=\"%t+%C\"",
         "interval": 600,
         "tooltip": false
     },
@@ -193,6 +195,7 @@
     },
     "custom/special_workspace": {
       "exec": "$HOME/.config/waybar/script/special_workspace_windows.sh",
+      "on-click": "hyprctl dispatch togglespecialworkspace && hyprctl dispatch submap graveyard",
       "interval": 3,
       "tooltip": false
     },

@@ -62,6 +62,8 @@ window#waybar.hidden {
   margin-left: 4px;
   padding-left: 10px;
   padding-right: 18px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   margin-bottom: 0px;
   border-radius: 3px;
   transition: none;
@@ -126,6 +128,8 @@ window#waybar.hidden {
   margin-left: 4px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   margin-bottom: 0px;
   border-radius: 3px;
   transition: none;
@@ -138,6 +142,8 @@ window#waybar.hidden {
   margin-left: 4px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   margin-bottom: 0px;
   border-radius: 3px;
   transition: none;
@@ -151,6 +157,8 @@ window#waybar.hidden {
   margin-right: 6px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   margin-bottom: 0px;
   border-radius: 3px;
   transition: none;
