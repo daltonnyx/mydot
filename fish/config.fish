@@ -23,7 +23,7 @@ if status is-interactive
         forticlient gui
     end
     function code_snip -d "Generate code snippet from a description"
-        agentcrew job --agent-config="~/.AgentCrew/agents-auto.toml" --agent="CodeSnipper" --provider=deepinfra --model-id="deepseek-ai/DeepSeek-V3.1-Terminus" "$argv"
+        agentcrew job --agent-config="$HOME/.AgentCrew/agents-auto.toml" --agent="CodeSnipper" --provider=deepinfra --model-id="Qwen/Qwen3-Coder-480B-A35B-Instruct" "$argv"
     end
     fzf_configure_bindings --directory=\cf --git_log=\cg
     set fzf_fd_opts --hidden --exclude=.git --exclude=.vscode --exclude=.npm --exclude=.nvm --exclude=.nx --exclude=.mozilla
