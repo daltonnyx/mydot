@@ -1,5 +1,4 @@
 if status is-interactive
-    fish_add_path /home/$USER/.dotnet
     # Commands to run in interactive sessions can go here
     alias vim="nvim"
     alias ls="eza"
@@ -23,7 +22,7 @@ if status is-interactive
         forticlient gui
     end
     function code_snip -d "Generate code snippet from a description"
-        agentcrew job --agent-config="$HOME/.AgentCrew/agents-auto.toml" --agent="CodeSnipper" --provider=deepinfra --model-id="Qwen/Qwen3-Coder-480B-A35B-Instruct" "$argv"
+        agentcrew job --agent-config="$HOME/.AgentCrew/agents-auto.toml" --agent="CodeSnipper" --provider=deepinfra --model-id="zai-org/GLM-4.7-Flash" "$argv"
     end
     fzf_configure_bindings --directory=\cf --git_log=\cg
     set fzf_fd_opts --hidden --exclude=.git --exclude=.vscode --exclude=.npm --exclude=.nvm --exclude=.nx --exclude=.mozilla
@@ -36,5 +35,7 @@ if status is-interactive
 end
 
 # uv
+fish_add_path $HOME/.dotnet
+fish_add_path $HOME/.dotnet/tools
 fish_add_path "/home/quytruong/.local/bin"
 . $HOME/.fishrc
