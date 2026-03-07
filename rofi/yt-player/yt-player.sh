@@ -106,7 +106,7 @@ main() {
 
     reset
 
-    mpvpaper --mpv-options="--no-audio-display --loop-playlist=inf --ytdl-raw-options=\"yes-playlist=\" --ytdl-format=\"$YT_FORMAT\"" "$MONITOR" "ytdl://ytsearch:$play"
+    mpvpaper --mpv-options="--no-audio-display --loop-playlist=inf --ytdl-raw-options="yes-playlist=" --ytdl-format=\"$YT_FORMAT\"" "$MONITOR" "ytdl://ytsearch:$play"
     ;;
   $url_menu)
     local url=$(rofi -theme catppuccin-macchiato -show-icons -icon-theme 'Papirus' -dmenu -p "URL: ")
@@ -114,7 +114,7 @@ main() {
       return
     fi
     reset
-    mpvpaper --mpv-options="--no-audio-display --loop-playlist=inf --ytdl-raw-options=\"yes-playlist=\" --ytdl-format=\"$YT_FORMAT\"" "$MONITOR" "ytdl://$url"
+    mpvpaper --mpv-options="--no-audio-display --loop-playlist=inf --ytdl-raw-options=yes-playlist= --ytdl-format=\"$YT_FORMAT\"" "$MONITOR" "ytdl://$url"
     ;;
   $music_menu)
     local search=$(rofi -theme catppuccin-macchiato -show-icons -icon-theme 'Papirus' -dmenu -p "Search: ")
@@ -142,7 +142,7 @@ main() {
       index=$((index + 1))
     done
     reset music
-    mpv --no-audio-display --loop-playlist=inf --ytdl-format="bestaudio" "${urls[$index]}"
+    mpv --no-audio-display --loop-playlist=inf --ytdl-raw-options=yes-playlist= --ytdl-format="bestaudio" "${urls[$index]}"
     ;;
   $end_menu)
     reset

@@ -1,9 +1,7 @@
 #!/bin/bash
 if [ -n "$WAYLAND_DISPLAY" ]; then
-  wall=$(find $HOME/Wallpapers/ -type f | shuf -n 1)
-  killall swaylock -q
-  swaylock -C ~/desktop-config/mydot/swaylock-macchiato.conf -f --fade-in 0.3 --clock --indicator --indicator-thickness 4 -i $wall
-  #pgrep hyprlock || hyprlock
+  killall hyprlock -q
+  hyprlock
 else
   BLANK='#00000000'
   CLEAR='#f4dbd622'
